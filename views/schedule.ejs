@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Go Airlines - Flight Schedules</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32"/>
+    <link rel="stylesheet" href="styling.css">
+
+    <style>
+        table
+        {
+            margin-top: -7%;
+            width: 55%;
+            text-align: center;
+            font-size: 19px;
+        }
+        th{background-color: rgb(213, 208, 255) ;padding: 12px;}
+        td
+        {
+            padding: 12px;
+        }
+        #customers tr:nth-child(odd){background-color: rgb(225, 221, 255);}
+        #customers tr:hover {background-color: rgb(199, 192, 252);}
+
+    </style>
+
+</head>
+<body>  
+    <a href="http://localhost:3000/home"><img src="logo.jpg" style="left: 13px;margin-top: -100px;position: absolute;top: 15%;" alt="Logo" width="150" height="100"></a>
+    <center><p style="font-size:45px;">Let's Go Airlines</p></center>
+    
+    <div class="topnav">
+        <a href="http://localhost:3000/home">Home</a>
+        <a href="http://localhost:3000/home#overview">Overview</a>
+        <a href="http://localhost:3000/home#vision">Vision</a>
+        <a href="http://localhost:3000/home#values">Values</a>
+        <a href="http://localhost:3000/fleet">Our Fleet</a>
+        <a href="http://localhost:3000/flightschedules">Flight Schedules</a>
+        <a href="http://localhost:3000/search" style="float:right">Search Flights</a>
+    </div>
+
+    <table id="customers" align="center">
+    <tr>
+        <th>
+            Flight Number
+        </th>
+        <th>
+            Origin
+        </th>
+        <th>
+            Destination
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Departure
+        </th>
+        <th>
+            Arrival
+        </th>
+    </tr>
+
+    <% result.forEach( row => {  %>
+
+        <tr>
+            <td>
+                <%= row.FlightNumber %>
+            </td>
+            <td>
+                <%= row.Origin %>
+            </td>
+            <td>
+                <%= row.Destination %>
+            </td>
+            <td>
+                <%= row.Date %>
+            </td>
+            <td>
+                <%= row.Departure %>
+            </td>
+            <td>
+                <%= row.Arrival %>
+            </td>
+        </tr><br>
+
+    <% }) %>
+    </table><br>
+
+    <div style="position: fixed; bottom: 0%; width: 99%;">
+        <footer>
+            <p>Copyright &copy; 2021 Let's Go Airlines. All rights reserved.<a style="color:white; position: fixed; right:2%;" href="http://localhost:3000/contact">Contact Us</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

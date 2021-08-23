@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Go Airlines - Booking Confirmation</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32"/>
+    <link rel="stylesheet" href="styling.css">
+
+    <style>
+        body{
+            background-color:rgb(236, 236, 236);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        td
+        {
+            width: 50%;
+        }
+        table{
+            background-color:rgb(225, 221, 255);
+            padding: 20px;
+            width: 45%;
+            border: silver;
+            border-radius: 8px;
+            font-size: 19px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <a href="http://localhost:3000/home"><img src="logo.jpg" style="left: 13px;margin-top: -100px;position: absolute;top: 15%;" alt="Logo" width="150" height="100"></a>
+    <center><p style="font-size:45px;">Let's Go Airlines</p></center>
+
+    <div class="topnav">
+        <a href="http://localhost:3000/home">Home</a>
+        <a href="http://localhost:3000/home#overview">Overview</a>
+        <a href="http://localhost:3000/home#vision">Vision</a>
+        <a href="http://localhost:3000/home#values">Values</a>
+        <a href="http://localhost:3000/fleet">Our Fleet</a>
+        <a href="http://localhost:3000/flightschedules">Flight Schedules</a>
+        <a href="http://localhost:3000/search" style="float:right">Search Flights</a>
+    </div><br><br>
+
+    <% var i=0 ; %>
+
+    <center><h1>Booking Confirmation</h1>
+        <h2>Your Flight Booking Is Confirmed<br><br><br>
+            Booking Details <br></h2>
+            <%  result.forEach( row => {  
+                if( i==0 )
+                {
+                    i++;    %>
+                    <table cellspacing="30">
+                        <tr><td align="center" colspan="2" style="font-size: 22px;">
+                            <b>Flight Information</b>
+                        </td></tr>
+                        <tr>
+                            <td align="right">Unique Trip ID :</td>
+                            <td align="left"><%= row.TripID %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Flight Number :</td>
+                            <td align="left"><%= row.FlightNumber %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Origin City :</td>
+                            <td align="left"><%= row.Origin %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Destination City :</td>
+                            <td align="left"><%= row.Destination %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Travel Date :</td>
+                            <td align="left"><%= row.Date %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Departure :</td>
+                            <td align="left"><%= row.Departure %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Arrival :</td>
+                            <td align="left"><%= row.Arrival %></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Ticket Price : </td>
+                            <td align="left">Rs. <%= row.Price %></td>
+                        </tr>
+                    </table><br><hr><br>
+                <% } %>
+
+                <table cellspacing="30">
+                    <tr><td align="center" colspan="2" style="font-size: 22px;">
+                        <b>Passenger Information</b>
+                    </td></tr>
+                    <tr>
+                        <td align="right">Passenger ID :</td>
+                        <td align="left"><%= row.PassengerID %></td>
+                    </tr>
+                    <tr>
+                        <td align="right">First Name :</td>
+                        <td align="left"><%= row.FirstName %></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Last Name :</td>
+                        <td align="left"><%= row.LastName %></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Age :</td>
+                        <td align="left"><%= row.Age %></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Gender :</td>
+                        <td align="left"><%= row.Gender %></td>
+                    </tr>
+                    <% var email = row.Email ; 
+                    if (email != null && email != '') { %>
+                        <tr>
+                            <td align="right">Email :</td>
+                            <td align="left"><%= row.Email %></td>
+                        </tr>
+                    <% } %>
+                    <% var phone = row.Phone ; 
+
+                    if (phone != 0 && phone != '') { %>
+                        <tr>
+                            <td align="right">Phone Number :</td>
+                            <td align="left"><%=row.Phone %></td>
+                        </tr>
+                    <% } %>                   
+                </table><br><br>
+            <% }) %> <hr><br>
+
+    <a href="http://localhost:3000/home"><button type="button" style="padding:12px; border-radius: 8px; color: white;background-color:rgb(22, 84, 197);font-size: 18px; font-family: 'Trebuchet MS';">Go To Homepage</button></a>
+    </center><br><br>
+    <div style="position: relative; bottom: 0%; width: 99%;">
+    <footer>
+        <p>Copyright &copy; 2021 Let's Go Airlines. All rights reserved.<a style="color:white; position: absolute; right:2%;" href="http://localhost:3000/contact">Contact Us</a>
+        </p>
+    </footer>
+    </div>
+
+</body>
+</html>

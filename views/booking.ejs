@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Go Airlines - Booking a Flight</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32"/>
+    <link rel="stylesheet" href="styling.css">
+
+    <script defer src="validation2.js"></script>
+
+</head>
+<body>
+    <div style="text-align: center; font-weight: bold; font-size:25px; color:darkslateblue"><p id="error"></p></div>
+    
+    <a href="http://localhost:3000/home"><img src="logo.jpg" style="left: 13px;margin-top: -100px;position: absolute;top: 15%;" alt="Logo" width="150" height="100"></a>
+    <center><p style="font-size:45px;">Let's Go Airlines</p></center>
+    
+    <div class="topnav">
+        <a href="http://localhost:3000/home">Home</a>
+        <a href="http://localhost:3000/home#overview">Overview</a>
+        <a href="http://localhost:3000/home#vision">Vision</a>
+        <a href="http://localhost:3000/home#values">Values</a>
+        <a href="http://localhost:3000/fleet">Our Fleet</a>
+        <a href="http://localhost:3000/flightschedules">Flight Schedules</a>
+        <a href="http://localhost:3000/search" style="float:right">Search Flights</a>
+    </div><br><br>
+
+
+    <%  if( pCount=='count1' ) {  %>
+
+
+        <form name="PassengerDetails" id="form" action="http://localhost:3000/confirmation" method="post">  
+            <center>
+                <table cellspacing="30">
+                    <tr>
+                        <td align="right" style="font-size:19px;">First Name:</td>
+                        <td align="right">
+                            <input type="text" id="firstName" name="firstName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Last Name:</td>
+                        <td align="right">
+                            <input type="text" id="lastName" name="lastName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Age:</td>
+                        <td align="right">
+                            <input type="text" id="age" name="age">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Gender:</td>
+                        <td align="left">
+                            <input type="radio" name="gender" value="Male">Male
+                            <input type="radio" name="gender" value="Female">Female
+                            <input type="radio" name="gender" value="Other">Other
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td align="right" style="font-size:19px;">E-Mail Address:</td>
+                        <td align="right">
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Phone Number:</td>
+                        <td align="right">
+                            <input type="text" id="phone" name="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2"><input id="submitButton" type="submit" value="Book Ticket" style="font-size:15px ; padding:10px 30px; font-family:'Trebuchet MS';"></td>
+                    </tr>
+                </table>
+            </center>
+        </form><br><br><br>
+
+
+    <%  } else if( pCount=='count2' ) {  %>
+
+
+        <form name="PassengersDetails" id="form" action="http://localhost:3000/confirmation" method="post">  
+            <center>
+                <table cellspacing="15">
+
+                    <tr>
+                        <td align="right" style="font-size:19px;">First Name:</td>
+                        <td align="right">
+                            <input type="text" id="firstName" name="firstName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Last Name:</td>
+                        <td align="right">
+                            <input type="text" id="lastName" name="lastName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Age:</td>
+                        <td align="right">
+                            <input type="text" id="age" name="age">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Gender:</td>
+                        <td align="left">
+                            <input type="radio" name="gender" value="Male">Male
+                            <input type="radio" name="gender" value="Female">Female
+                            <input type="radio" name="gender" value="Other">Other
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td align="right" style="font-size:19px;">E-Mail Address:</td>
+                        <td align="right">
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Phone Number:</td>
+                        <td align="right">
+                            <input type="text" id="phone" name="phone">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td align="right" style="font-size:19px;">First Name:</td>
+                        <td align="right">
+                            <input type="text" id="firstName2" name="firstName2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Last Name:</td>
+                        <td align="right">
+                            <input type="text" id="lastName2" name="lastName2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Age:</td>
+                        <td align="right">
+                            <input type="text" id="age2" name="age2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Gender:</td>
+                        <td align="left">
+                            <input type="radio" name="gender2" value="Male">Male
+                            <input type="radio" name="gender2" value="Female">Female
+                            <input type="radio" name="gender2" value="Other">Other
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">E-Mail Address:</td>
+                        <td align="right">
+                            <input type="email" id="email2" name="email2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-size:19px;">Phone Number:</td>
+                        <td align="right">
+                            <input type="text" id="phone2" name="phone2">
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td align="center" colspan="2"><input id="submitButton" type="submit" value="Book Ticket" style="font-size:15px ; padding:10px 30px; font-family:'Trebuchet MS';"></td>
+                    </tr>
+                </table>
+            </center>
+        </form><br><br><br>
+        
+    <%  }  %>
+
+    <div style="position: relative; bottom: 0%; width: 99%;">
+        <footer>
+            <p>Copyright &copy; 2021 Let's Go Airlines. All rights reserved.<a style="color:white; position: absolute; right:2%;" href="http://localhost:3000/contact">Contact Us</a>
+                
+            </p>
+        </footer>
+    </div>
+    
+</body>
+</html>
