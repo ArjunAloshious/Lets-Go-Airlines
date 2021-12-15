@@ -6,10 +6,12 @@ A sample online flight booking system built using Node.js, HTML, CSS, Bootstrap,
 
 ![](Screenshots/2.png)
 
+
 ## Our Fleet Page
 ![](Screenshots/3.png)
 
 ![](Screenshots/4.png)
+
 
 ## Flight Schedules Page
 ![](Screenshots/5.png)
@@ -18,8 +20,10 @@ A sample online flight booking system built using Node.js, HTML, CSS, Bootstrap,
 
 ![](Screenshots/6.png)
 
+
 ## Contact Us Page
 ![](Screenshots/26.png)
+
 
 ## Search Flights Page
 ![](Screenshots/7.png)
@@ -72,10 +76,14 @@ A sample online flight booking system built using Node.js, HTML, CSS, Bootstrap,
 
 ![](Screenshots/19.png)
 
+
 ## Booking Confirmation page
 ![](Screenshots/20.png)
+
 ![](Screenshots/21.png)
+
 ![](Screenshots/22.png)
+
 ![](Screenshots/23.png)
 
 ### Passenger details are entered in Trip table
